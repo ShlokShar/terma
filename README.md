@@ -1,4 +1,4 @@
-![alt text](src/media/logo.png)
+![logo](src/media/logo.png)
 # Terma-CLI
 
 A lightweight Python CLI tool that converts natural language instructions into terminal commands.

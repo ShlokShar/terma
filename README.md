@@ -1,3 +1,4 @@
+![alt text](src/media/logo.png)
 # Terma
 
 A lightweight Python CLI tool that converts natural language instructions into terminal commands.

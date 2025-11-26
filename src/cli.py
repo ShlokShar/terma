@@ -22,7 +22,7 @@ PORT = 7313
 
 
 app = typer.Typer()
-app.add_typer(config.app, name="config")
+app.add_typer(config.app, name="config", help="modify Terma's configuration (i.e. provider, model, API key)")
 
 
 def start_server() -> bool:
@@ -50,7 +50,7 @@ def start_server() -> bool:
         return False
 
 
-@app.command(name="exec")
+@app.command(name="exec", help="returns a shell command from natural language arguments")
 def execute_command(args: List[str]) -> None:
     """
     forwards user prompt to Terma agent using a client / server socket, in which the Terma

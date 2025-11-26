@@ -6,7 +6,10 @@ build-backend = "hatchling.build"
 name = "terma"
 version = "1.0.0"
 dependencies = [
-
+    "typer",
+    "openai",
+    "anthropic",
+    "google-genai"
 ]
 authors = [
     {name = "Shlok Sharma", email = "shlokrma@gmail.com"}

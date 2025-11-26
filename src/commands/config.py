@@ -40,6 +40,7 @@ def set_provider(provider: Annotated[str, typer.Argument()] = None, api_key: str
     if not api_key:
         api_key = typer.prompt("API Key")
 
+    # save configuration
     configuration = {
         "provider": provider,
         "model": PROVIDERS[provider][0],
@@ -60,7 +61,7 @@ def set_api_key(api_key: str = None) -> None:
     :param api_key: the API key to be updated in the configuration
     :return: None
     """
-    # check if valid configuration is enabled
+    # check if current configuration is valid
     if not has_config():
         exception_message = "Invalid configuration." \
                             f"> run \"{highlight('terma config provider <configuration>', 'OKCYAN')}\""
@@ -69,11 +70,10 @@ def set_api_key(api_key: str = None) -> None:
     if not api_key:
         api_key = typer.prompt("API Key")
 
-    # modify configuration's API key
+    # only modify configuration's API key
     configuration = load_config()
     configuration["api-key"] = api_key
     save_config(configuration)
-
     print(f"API Key set to: {highlight(mask_api(api_key), 'GREEN')}\n")
 
 
@@ -95,6 +95,7 @@ def set_model(model: Annotated[str, typer.Argument()] = None) -> None:
         message = "Invalid model name."
         raise_exception(message)
 
+    # only modify configuration's model
     configuration["model"] = model
     save_config(configuration)
     print(f"Model set to: {highlight(model, 'GREEN')}\n")

@@ -66,10 +66,16 @@ def execute_command(args: List[str]) -> None:
     client_socket.connect((HOST, PORT))
     client_socket.send((prompt + "\n").encode())
 
-    data = client_socket.recv(1024).decode()
-    print(data)
-
+    response = client_socket.recv(1024).decode()
     client_socket.close()
+    print(response)
+    run_commands = typer.prompt("\nExecute command(s)? [y/N]")
+    run_commands = run_commands.lower()
+
+    # execute command(s) if user confirms prompt
+    if run_commands == "y" or run_commands == "yes":
+        subprocess.run(response, shell=True, text=True)
+    print("")
 
 
 if __name__ == "__main__":

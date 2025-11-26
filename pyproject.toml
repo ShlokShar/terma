@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "terma"
+version = "1.0.0"
+dependencies = [
+
+]
+authors = [
+    {name = "Shlok Sharma", email = "shlokrma@gmail.com"}
+]
+requires-python = ">=3.9"
+readme = "README.md"
+license = "MIT"
+description = "A lightweight CLI tool that converts natural language instructions into terminal commands."
+[project.scripts]
+terma = "src.cli:app"
+[project.urls]
+Documentation = "https://github.com/ShlokShar/terma"
+[tool.hatch.build.targets.wheel]
+packages = ["src"]

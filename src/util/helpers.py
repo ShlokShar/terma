@@ -12,15 +12,29 @@ helpers.py — provides helper functions used in primary modules
 PROVIDERS = {
     "openai": [
         "gpt-4.1-nano",
+        "gpt-4.1-mini",
+        "gpt-4.1",
+        "gpt-4o-mini",
+        "gpt-4o",
+        "gpt-3.5-turbo-1106",
+        "gpt-3.5-turbo-0301",
     ],
     "google": [
-        "gemini-2.0-flash-exp",
         "gemini-2.5-flash-lite",
-        "gemini-2.0-lite",
-        "gemini-2.5-flash"
+        "gemini-2.0-flash-lite",
+        "gemini-2.5-flash",
+        "gemini-2.0-flash-exp",
+        "gemini-2.5-pro",
     ],
     "anthropic": [
         "claude-haiku-4-5",
+        "claude-haiku-4-3",
+        "claude-sonnet-4-5",
+        "claude-sonnet-4-3",
+        "claude-opus-4-5",
+        "claude-opus-4-3",
+        "claude-haiku-3-5",
+        "claude-sonnet-3-5",
     ],
 }
 

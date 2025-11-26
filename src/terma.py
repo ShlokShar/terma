@@ -217,7 +217,6 @@ def cache_client() -> None:
         last_client_update = time.time()
         configuration = load_config()
         if not terma.compare_config(configuration):
-            print("Updating config")
             terma = Terma()
 
 
@@ -255,8 +254,7 @@ def main() -> None:
                             f"> run \"{highlight('terma config api-key', 'OKCYAN')}\""
         raise_exception(exception_message)
         server_socket.close()
-    except Exception as e:
-        raise_exception(f"Unexpected error: {e}")
+    except Exception:
         server_socket.close()
 
 

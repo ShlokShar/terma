@@ -37,7 +37,7 @@ def start_server() -> bool:
         client_socket.connect((HOST, PORT))
         return True
     except socket.error:
-        subprocess.Popen(["python3", "src/agent.py"])
+        subprocess.Popen(["python3", "src/terma.py"])
         for _ in range(50):
             try:
                 client_socket.connect((HOST, PORT))

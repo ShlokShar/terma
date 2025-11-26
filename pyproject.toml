@@ -3,8 +3,8 @@ requires = ["hatchling >= 1.26"]
 build-backend = "hatchling.build"
 
 [project]
-name = "terma"
-version = "1.0.0"
+name = "terma-cli"
+version = "1.0.1"
 dependencies = [
     "typer",
     "openai",

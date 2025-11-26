@@ -1,11 +1,11 @@
 ![alt text](src/media/logo.png)
-# Terma
+# Terma-CLI
 
 A lightweight Python CLI tool that converts natural language instructions into terminal commands.
 
 ## Overview
 
-**Terma** lets you describe what you want to do in plain English, and your configured AI provider (OpenAI, Anthropic, or Google GenAI) will translate it into a valid terminal command.
+**Terma-CLI** lets you describe what you want to do in plain English, and your configured AI provider (OpenAI, Anthropic, or Google GenAI) will translate it into a valid terminal command.
 
 ## Features
 
@@ -22,9 +22,9 @@ A lightweight Python CLI tool that converts natural language instructions into t
 
 ### Globally
 
-You can install Terma through PyPI:
+You can install Terma-CLI through PyPI:
 ```bash
-pip install terma
+pip install terma-cli
 ```
 
 ### Locally
@@ -43,7 +43,7 @@ terma <command> <args>
 
 ## Configuration
 
-Terma uses a simple config system to set your AI provider, API key, and model. Configuration is **required** prior to executing the natural language command.
+Terma-CLI uses a simple config system to set your AI provider, API key, and model. Configuration is **required** prior to executing the natural language command.
 
 ### Supported config commands
 

@@ -61,15 +61,7 @@ Translate any natural language instruction into a real command:
 terma exec <instruction>
 ```
 
-### Examples
-```bash
-terma exec check node version
-```
-```bash
-terma exec create a new python venv in ./env and activate it
-```
-
-## Example Outputs
+## Example Commands
 
 **Input:**
 ```bash
